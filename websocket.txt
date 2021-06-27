@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+<title>
+    WEBSOCKET 
+</title>
+</head>
+  <body>
+   if(window.websocket)
+   {
+      console.log("websockets are supported);
+	  url="ws.//yoururl.extension:port;
+	  var ws=new websocket(url);
+	  ws.send("message to server");
+	  ws.addEventListener('open',function()
+	  {
+	     console.log("connection using event");
+	  });
+	  ws.onopen=function()
+	  {
+	      console.log("connection using function");
+	  });
+	}
+	else
+	 {
+	   console.log("websockets are not supported);
+	 }
+</body>
+</html>
+	  
