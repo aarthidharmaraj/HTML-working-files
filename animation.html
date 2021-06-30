@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale-1.0">
+		<title>
+		 ANIMATION
+		</title>
+		<style>
+			.parent{
+					border-style:solid;
+					border-radius: 10px;
+					border-color:black;
+					background-color:white;
+					height: 100px;
+					width:400px;
+					}
+			.Animate_text
+			{
+				padding-left:20px;
+				padding-bottom:20px;
+				padding-top:20px;
+				-webkit-animation-name: move-horizontal;
+				animation-name: move-horizontal;
+				-webkit-animation-duration: 3s;
+				animation-duration: 3s;
+				-webkit-animation-direction:alternate;
+				animation-direction:alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count:infinite;
+				animation-iteration-count:infinite;
+			}
+
+			@-webkit-keyframes move-horizontal{
+				100% {
+						-webkit-transform : translate(250px);
+						transform : translate (250px);
+						}
+						from{
+							left:00%;
+						}
+						to{
+							right:100%;
+						}
+			       }
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+		<p style="width:380 px"class="Animate_text"value="move the text" > Aspire Systems </p>
+	</div>
+	</body>
+</html>

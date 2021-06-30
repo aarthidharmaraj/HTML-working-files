@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ; <head>
+<meta charset="UTF-8">
+<title> WEBSOCKET REQUEST</title>
+</head>
+
+<body>
+    <script>
+        var sock = new WebSocket("wss://echo.websocket.org");
+        sock.onopen = function(event) {
+            alert('WebSocket connected');
+            setTimeout(function() {
+                sock.send("welcome");
+            }, 1000);
+        };
+        sock.onmessage = function(event) {
+            console.log(event.data);
+        }
+    </script>
+</body>
+
+</html>

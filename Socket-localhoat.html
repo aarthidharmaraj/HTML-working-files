@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ; <head>
+<meta charset="UTF-8">
+<title> WEBSOCKET REQUEST TO LOCALHOST</title>
+</head>
+
+<body>
+    <button>Send Hello</button>
+
+    <script>
+        var sock = new WebSocket("ws://localhost:8082");
+        sock.onopen = function(event) {
+            alert('WebSocket connected');
+            setTimeout(function() {
+                sock.send("welcome");
+            }, 1000);
+        };
+        sock.onmessage = function(event) {
+            console.log(event);
+        }
+        document.querySelector('button').onclick = function() {
+            sock.send("hello");
+        };
+    </script>
+</body>
+
+</html>
