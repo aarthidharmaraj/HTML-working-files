@@ -1,0 +1,43 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+}
+
+table {
+  border: 1px solid blue;
+  width: 50%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 20px;
+  margin: 10px;
+}
+
+table tr {
+  background-color: skyblue;
+  border: 1px solid blue;
+  padding: 20px;
+}
+
+table th,
+table td {
+  padding: 30px;
+  text-align: center;
+}
+
+table th {
+  font-size: 20px;
+  background-color:green;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+tbody tr:nth-child(odd)
+{
+  background: pink;
+}
+tbody td:nth-child(odd)
+{
+  background:yellow ;
+}
+
